@@ -37,7 +37,7 @@ void insertion_sort_list(listint_t **list)
 			(*insert_pos)->prev = current;
 		}
 		*insert_pos = current;
-		current->prev = NULL;
+		current->prev = *insert_pos;
 		current = next;
 	}
 	*list = sorted;
