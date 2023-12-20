@@ -8,15 +8,14 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *sorted;
-	*sorted = NULL;
+	listint_t *sorted = NULL;
 
 	while (*list)
 	{
 		listint_t *node = *list;
-		*head = node->next;
+		*list = node->next;
 
-		listint_t **current = &sorted;
+		listint_t **current = *sorted;
 		while (*current && (*current)->n < node->n)
 		{
 			current = &(*current)->next;
