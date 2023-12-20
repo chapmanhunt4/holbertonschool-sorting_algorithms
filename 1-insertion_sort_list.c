@@ -26,7 +26,7 @@ void insertion_sort_list(listint_t **list)
 			current->next->prev = current->prev;
 		}
 
-		*insert_pos = sorted;
+		insert_pos = &sorted;
 		while (*insert_pos != NULL && (*insert_pos)->n > current->n)
 		{
 			insert_pos = &(*insert_pos)->next;
