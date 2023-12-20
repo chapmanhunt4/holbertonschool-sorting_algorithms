@@ -28,6 +28,10 @@ void insertion_sort_list(listint_t **list)
 		}
 		*insert_pos = current;
 		current->prev = *insert_pos;
+		if (*insert_pos != NULL)
+		{
+			(*insert_pos)->prev = current;
+		}
 		current = next;
 	}
 	*list = sorted;
