@@ -24,6 +24,6 @@ void selection_sort(int *array, size_t size)
 	print_array(array, size);
 	}
 	temp = array[min];
-	array[i] = array[min];
-	array[min] = temp;
+	array[min] = array[i];
+	array[i] = temp;
 }
