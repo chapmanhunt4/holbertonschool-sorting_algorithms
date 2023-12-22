@@ -15,18 +15,18 @@ void selection_sort(int *array, size_t size)
 	for (i = 0; i < size; i++)
 	{
 		min = array[i];
-		mindex = i;
+		temp = i;
 		for (j = i; j < size; j++)
 		{
-			if (array[j] < array[mindex])
+			if (array[j] < array[temp])
 			{
 				min = array[j];
-				mindex = j;
+				temp = j;
 			}
 		}
-		if (mindex != i)
+		if (temp != i)
 		{
-			array[mindex] = array[i];
+			array[temp] = array[i];
 			array[i] = min;
 			print_array(array, size);
 		}
